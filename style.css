@@ -1,0 +1,158 @@
+/* Author: https://andy-bell.co.uk/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+
+/* Styles */
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--red);
+    background-image: url(./images/bg-intro-mobile.png);
+    background-position: top left;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heading {
+    color: var(--white);
+    font-size: 1.75rem;
+    line-height: 2.3rem;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.main-text {
+    color: var(--white);
+    margin: auto;
+    max-width: 32ch;
+    text-align: center;
+}
+
+.btn-and-form-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.try-it-btn {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 rgba(0, 0, 0, 0.2);
+    color: var(--white);
+    padding: 1.2rem 0;
+    text-wrap: balance;
+    width: 90%;
+}
+
+.try-it-btn .bold {
+    font-weight: 600;
+}
+
+.form-wrapper {
+    background-color: var(--white);
+    border-radius: 10px;
+}
