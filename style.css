@@ -216,11 +216,13 @@ input {
 @media (min-width: 800px) {
     body {
         background-image: url(./images/bg-intro-desktop.png);
+        min-height: 0;
     }
 
     main {
         flex-direction: row;
         justify-content: center;
+        min-height: 99vh;
     }
 
     .text-wrapper {
