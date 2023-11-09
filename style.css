@@ -144,7 +144,9 @@ main {
     border-radius: 10px;
     box-shadow: 0 7px 0 rgba(0, 0, 0, 0.15);
     color: var(--white);
+    font-weight: 400;
     margin-bottom: 1.5rem;
+    margin-top: 0.7rem;
     padding: 1.2rem 0;
     text-wrap: balance;
     width: 90%;
@@ -152,6 +154,10 @@ main {
 
 .try-it-btn .bold {
     font-weight: 600;
+}
+
+.try-it-btn:is(:hover, :focus) {
+    background-color: hsl(248, 32%, 40%);
 }
 
 .form-wrapper {
@@ -167,6 +173,7 @@ main {
 input {
     border: 1px solid var(--grayish-blue);
     border-radius: 5px;
+    font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -179,15 +186,20 @@ input {
     border-radius: 5px;
     color: var(--white);
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 1rem;
     text-transform: uppercase;
     width: 100%;
 }
 
+.claim-trial-btn:is(:hover, :focus) {
+    background-color: hsl(154, 59%, 40%);
+}
+
 .tas-text {
     color: var(--grayish-blue);
     font-size: 0.7rem;
+    line-height: 1.2rem;
     padding: 0 1rem;
 }
 
@@ -195,4 +207,8 @@ input {
     color: var(--red);
     font-weight: 700;
     text-decoration: none;
+}
+
+.tas--link:is(:hover, :focus) {
+    text-decoration: underline;
 }
