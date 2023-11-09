@@ -156,10 +156,6 @@ main {
     font-weight: 600;
 }
 
-.try-it-btn:is(:hover, :focus) {
-    background-color: hsl(248, 32%, 40%);
-}
-
 .form-wrapper {
     background-color: var(--white);
     border-radius: 10px;
@@ -249,5 +245,9 @@ input {
     .btn-and-form-wrapper {
         flex-basis: clamp(300px, 50%, 500px);
         margin: 0;
+    }
+
+    .claim-trial-btn {
+        cursor: pointer;
     }
 }
