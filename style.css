@@ -176,12 +176,23 @@ input {
     width: 100%;
 }
 
+.input-error {
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.input-error::placeholder {
+    color: var(--red);
+}
+
 .error-msg {
+    color: var(--red);
     display: none;
     margin: 0;
 }
 
 .email-error-msg {
+    color: var(--red);
     display: none;
     margin: 0;
 }
