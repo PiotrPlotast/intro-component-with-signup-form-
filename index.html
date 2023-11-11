@@ -24,10 +24,22 @@
 
       <div class="form-wrapper">
         <form>
-          <input type="text" placeholder="First Name" name="First&#32;Name">
-          <input type="text" placeholder="Last Name" name="Last&#32;Name">
-          <input type="text" placeholder="Email Address" name="Email&#32;Address">
-          <input type="text" placeholder="Password" name="Password">
+          <div class="input-wrapper">
+            <input type="text" placeholder="First Name" name="First&#32;Name">
+            <p class="error-msg">First Name cannot be empty</p>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Last Name" name="Last&#32;Name">
+            <p class="error-msg">Last Name cannot be empty</p>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Email Address" class="email" name="Email&#32;Address">
+            <p class="email-error-msg">Looks like this is not an Email</p>
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Password" name="Password">
+            <p class="error-msg">Password cannot be empty</p>
+          </div>
           <button class="claim-trial-btn">Claim your free trial</button>
           <p class="tas-text">By clicking the button, you are agreeing to our <a href="#" class="tas--link">Terms and
               Services</a></p>

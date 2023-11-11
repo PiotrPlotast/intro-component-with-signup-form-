@@ -1,16 +1,18 @@
-
+const errorMsg = document.querySelectorAll('.error-msg');
 const form = document.querySelector('form');
-const inputs = form.querySelectorAll('input');
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
 
-    inputs.forEach((input) => {
-        if (input.value.trim() === '') {
-            const errorMessage = document.createElement('p');
-            errorMessage.classList.add('error-message');
-            errorMessage.textContent = `${input.name} is required`;
-            input.parentElement.appendChild(errorMessage);
-        }
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    errorMsg.forEach((msg) => {
+        msg.classList.add('show');
     });
+    const email = document.querySelector('.email').value;
+    if (!validateEmail(email)) {
+        document.querySelector('.email-error-msg').classList.add('show');
+    }
 });

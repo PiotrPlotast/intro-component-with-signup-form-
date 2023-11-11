@@ -176,6 +176,20 @@ input {
     width: 100%;
 }
 
+.error-msg {
+    display: none;
+    margin: 0;
+}
+
+.email-error-msg {
+    display: none;
+    margin: 0;
+}
+
+.show {
+    display: block;
+}
+
 .claim-trial-btn {
     background-color: var(--green);
     border: none;
