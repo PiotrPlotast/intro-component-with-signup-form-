@@ -177,6 +177,9 @@ input {
 }
 
 .input-error {
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
     border: 1px solid var(--red);
     color: var(--red);
 }
@@ -188,13 +191,10 @@ input {
 .error-msg {
     color: var(--red);
     display: none;
+    font-size: 0.8rem;
     margin: 0;
-}
-
-.email-error-msg {
-    color: var(--red);
-    display: none;
-    margin: 0;
+    text-align: right;
+    transform: translateY(-1rem);
 }
 
 .show {
