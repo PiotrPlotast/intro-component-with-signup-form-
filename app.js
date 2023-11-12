@@ -5,39 +5,50 @@ const password = document.querySelector('.password');
 const form = document.querySelector('form');
 
 
+function isEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
 function checkInputs() {
     // get the values from the inputs
     const firstNameValue = firstName.value.trim();
     const lastNameValue = lastName.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-
+    let inputsCorrect = 0;
     if (firstNameValue === '') {
         firstName.nextElementSibling.classList.add('show');
     } else {
-        return;
+        firstName.nextElementSibling.classList.remove('show');
+        inputsCorrect++;
     }
 
     if (lastNameValue === '') {
-        firstName.nextElementSibling.classList.add('show');
+        lastName.nextElementSibling.classList.add('show');
     } else {
-        return;
+        lastName.nextElementSibling.classList.remove('show');
+        inputsCorrect++;
     }
 
     if (emailValue === '') {
-        firstName.nextElementSibling.classList.add('show');
+        email.nextElementSibling.classList.add('show');
     } else if (!isEmail(emailValue)) {
-        firstName.nextElementSibling.classList.add('show');
+        email.nextElementSibling.classList.add('show');
     } else {
-        return;
+        email.nextElementSibling.classList.remove('show');
+        inputsCorrect++;
     }
 
     if (passwordValue === '') {
-        firstName.nextElementSibling.classList.add('show');
+        password.nextElementSibling.classList.add('show');
     } else {
-        return;
+        password.nextElementSibling.classList.remove('show');
+        inputsCorrect++;
     }
 
+    if (inputsCorrect === 4) {
+        form.submit();
+    }
 }
 
 form.addEventListener('submit', (e) => {
